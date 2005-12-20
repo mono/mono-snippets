@@ -16,6 +16,7 @@ if test "x$MCS" = "xno"; then
 fi
 
 PKG_CHECK_MODULES(GTKSHARP, gtk-sharp-2.0 >= 2.3.92)
+AC_SUBST(GTKSHARP_LIBS)
 
 AC_OUTPUT([
 	Makefile

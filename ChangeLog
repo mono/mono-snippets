@@ -1,3 +1,7 @@
+2005-12-20  Aaron Bockover  <aaron@aaronbock.net>
+
+	* configure.ac: AC_SUBST(GTKSHARP_LIBS)
+
 2005-12-19  Aaron Bockover  <aaron@aaronbock.net>
 
 	* src/NotificationAreaIcon/*: Added the NotificationAreaIcon class and
