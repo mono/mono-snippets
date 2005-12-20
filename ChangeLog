@@ -1,0 +1,7 @@
+2005-12-19  Aaron Bockover  <aaron@aaronbock.net>
+
+	* src/NotificationAreaIcon/*: Added the NotificationAreaIcon class and
+	wrote a sample program for it
+	
+	* mono-snippets: Set up initial project and build system
+

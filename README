@@ -1,0 +1,7 @@
+Mono Snippets is a simple project that contains commonly shared code in 
+Mono/Gtk# applications, like the NotificationAreaIcon class. It is the
+central maintainence point for such "snippets" of code, and contains
+example programs for each snippet.
+
+Think of Mono Snippets as "egg" for Mono
+

@@ -1,0 +1,46 @@
+It is important that *both* the MonoDevelop solution file and project files
+remain in sync with the autotools build scripts.
+
+If you add a new snippet, add it under src/, and use the NotificationAreaIcon
+snippet as an example for creating the Mono Develop project file and the
+autotools Makefile.am file. 
+
+Basically, here's how to create a new snippet named "NewSnippet":
+
+---------------
+
+[edit configure.ac to output src/NewSnippet/Makefile]
+[
+  edit mono-snippets.mds and add the following entry to the <Entries> element, 
+  replacing NewSnippet with the name of your snippet:
+
+    <Entry filename="./src/NewSnippet/snippet.mdp" />
+]
+
+cd src/
+cp -rf NotificationAreaIcon NewSnippet
+
+[edit Makefile.am; add "NewSnippet" to SUBDIRS]
+
+cd NewSnippet
+
+[
+  edit Makefile.am; change the SNIPPET_NAME and SOURCE variables to
+  the name of your snippet (same name as the directory, "NewSnippet")
+  and add names of the .cs source files
+]
+
+[
+  edit snippet.mdp to reflect name change from NotificationAreaIcon to 
+  NewSnippet. A simple search/replace should be all that is needed.
+]
+
+---------------
+
+Snippets should be relatively short. Just one main class and a sample of
+using the class. The class .cs file should have the same name as the sample
+directory (i.e. the main class for the NewSnippet snippet is NewSnippet.cs),
+and the sample code should be in a file Sample.cs. This keeps the snippets
+simple!
+
+
